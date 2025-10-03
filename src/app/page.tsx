@@ -1,103 +1,133 @@
-import Image from "next/image";
+// app/page.tsx
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
+import HeroSection from "./PageComponents/HeroSection";
+import About from "./PageComponents/About";
+import Services from "./PageComponents/Services";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main id="home" className="relative">
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* HERO */}
+     <HeroSection/>
+
+      {/* ABOUT */}
+     <About/>
+
+      {/* SERVICES */}
+      {/* <section id="services" className="py-20 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            Services
+          </h2>
+          <p className="mt-3 text-slate-700 max-w-2xl">
+            We deliver reliable upstream services with measurable impact.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Drilling Support",
+                desc: "Real-time engineering and operations support to minimize downtime.",
+              },
+              {
+                title: "Project Management",
+                desc: "End-to-end planning, execution, and delivery with strict QA/QC.",
+              },
+              {
+                title: "Engineering Consulting",
+                desc: "Specialist teams for well design, optimization, and integrity.",
+              },
+              {
+                title: "Equipment Supply",
+                desc: "Oilfield tools and spares through vetted OEM partners.",
+              },
+              {
+                title: "Field Services",
+                desc: "On-site personnel for commissioning, inspection, and maintenance.",
+              },
+              {
+                title: "Data & Reporting",
+                desc: "Operational analytics and compliance reporting in real time.",
+              },
+            ].map((s) => (
+              <div
+                key={s.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition"
+              >
+                <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
+                <p className="mt-2 text-sm text-slate-700">{s.desc}</p>
+                <div className="mt-4 text-sm">
+                  <a href="#contact" className="text-[#FF7A00] font-semibold hover:underline">
+                    Talk to an expert →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section> */}
+      <Services/>
+      {/* SAFETY */}
+      <section id="safety" className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Safety</h2>
+          <p className="mt-3 text-slate-700 max-w-2xl">
+            We operate with uncompromising HSE standards aligned to global best
+            practices, focusing on risk management, training, and continuous
+            improvement.
+          </p>
+        </div>
+      </section>
+
+      {/* ICT */}
+      <section id="ict" className="py-20 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            ICT
+          </h2>
+          <p className="mt-3 text-slate-700 max-w-2xl">
+            Our ICT layer enables real-time data flow from field operations to
+            management dashboards, ensuring faster decisions and better outcomes.
+          </p>
+        </div>
+      </section>
+
+      {/* CAREERS */}
+      <section id="careers" className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            Careers
+          </h2>
+          <p className="mt-3 text-slate-700 max-w-2xl">
+            Join experienced professionals delivering mission-critical oilfield
+            services. Check back soon for openings.
+          </p>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-20 bg-slate-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold">
+                Contact Us
+              </h2>
+              <p className="mt-3 text-white/80">
+                Lagos HQ: 9, Adebayo Ogunrombi Close, Ogudu GRA, Lagos, NG
+                <br />
+                Houston Office: 100 Glenborough Drive, Suite #444, Houston, TX 77067, USA
+              </p>
+            </div>
+          
+          </div>
+          <p className="mt-10 text-xs text-white/60">
+            © {new Date().getFullYear()} Deepdrill Oilfield Services Ltd. All rights reserved.
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }
