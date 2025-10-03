@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeroSection from "./PageComponents/HeroSection";
 import About from "./PageComponents/About";
 import Services from "./PageComponents/Services";
+import ICTSection from "./PageComponents/IctSection";
 
 export default function HomePage() {
   return (
@@ -82,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* ICT */}
-      <section id="ict" className="py-20 bg-slate-50">
+      {/* <section id="ict" className="py-20 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             ICT
@@ -92,7 +93,8 @@ export default function HomePage() {
             management dashboards, ensuring faster decisions and better outcomes.
           </p>
         </div>
-      </section>
+      </section> */}
+      <ICTSection />
 
       {/* CAREERS */}
       <section id="careers" className="py-20 bg-white">
