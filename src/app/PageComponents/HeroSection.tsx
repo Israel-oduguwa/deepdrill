@@ -306,7 +306,7 @@ export default function HeroSection({ className, intervalMs = 6000 }: Props) {
             {/* Enhanced Trust Indicators with Mobile Optimization */}
             <div
               className={cn(
-                "mt-8 hidden lg:mt-16 lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8",
+                "mt-8 hidden lg:mt-8 lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8",
                 mounted && !prefersReducedMotion ? "dd-fade-in-up" : ""
               )}
               style={{ animationDelay: "620ms" }}
@@ -361,13 +361,13 @@ export default function HeroSection({ className, intervalMs = 6000 }: Props) {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-t from-slate-700 via-slate-800 to-transparent" />
 
       {/* Premium Scroll Indicator */}
-      <div className="absolute bottom-4 lg:bottom-8 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute bottom-4 lg:bottom-2 left-1/2 -translate-x-1/2 z-20">
         <a
           href="#about"
           aria-label="Scroll to About Section"
           className="group inline-flex flex-col items-center text-white/80 hover:text-white transition-all duration-500"
         >
-          <span className="text-xs font-semibold uppercase tracking-widest mb-3 opacity-80 group-hover:opacity-100">
+          <span className="text-xs font-semibold uppercase tracking-widest mb-3 lg:mb-1 opacity-80 group-hover:opacity-100">
             Explore More
           </span>
           <div className="relative h-12 w-px overflow-hidden rounded-full bg-white/30 group-hover:bg-white/50">

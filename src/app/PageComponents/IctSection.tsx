@@ -13,7 +13,7 @@ import {
   Shield,
   Zap,
   Cloud,
-  Database,
+  Database, 
   Router,
   Cable,
   Monitor,
@@ -174,7 +174,8 @@ export default function ICTSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
+
+        <div className="text-center mb-8">
         <motion.span
             variants={fadeInUp}
             className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white/80 backdrop-blur-sm px-4 py-2 text-sm font-semibold uppercase tracking-wider text-orange-600"
@@ -184,8 +185,11 @@ export default function ICTSection() {
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            Our Services
+            ICT Solution
           </motion.span>
+        </div>
+        <div className="text-center mb-20">
+        
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6">
             Advanced <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">ICT Infrastructure</span>
           </h2>

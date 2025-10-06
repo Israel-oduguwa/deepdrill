@@ -1,14 +1,8 @@
 // app/layout.tsx
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins, Playfair_Display } from 'next/font/google';
+import {  Poppins, Montserrat } from 'next/font/google';
 import "./globals.css";
 
-// Configure Inter for body text
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-});
 
 // Configure Poppins for buttons and accents
 const poppins = Poppins({
@@ -18,12 +12,13 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
-// Configure Playfair Display for headings
-const playfair = Playfair_Display({
+const montserrat = Montserrat({
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-playfair',
+  variable: '--font-montserrat',
 });
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.deepdrill.com"), // TODO: put the real domain
   applicationName: "Deepdrill Oilfield Services Ltd",
@@ -145,7 +140,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={montserrat.className}>
       <head>
         <script
           type="application/ld+json"
@@ -153,7 +148,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${poppins.variable} ${playfair.variable}`}>
+      <body  className="scroll-smooth">
         {children}
       </body>
     </html>

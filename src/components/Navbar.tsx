@@ -53,7 +53,7 @@ export default function Navbar() {
           >
             <div className="relative">
               <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-slate-900 to-slate-700 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-                <div className="h-3 w-3 rounded-full bg-amber-400 shadow-sm" />
+                <div className="h-3 w-3 rounded-full bg-amber-400 shadow-sm animate-pulse" />
               </div>
               <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-amber-400/20 to-orange-500/20 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300" />
             </div>
