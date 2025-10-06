@@ -187,7 +187,7 @@ export default function HeroSection({ className, intervalMs = 6000 }: Props) {
             <div className="mt-6 lg:mt-12">
               <h1
                 className={cn(
-                  "text-5xl font-black leading-[1.05] text-white md:text-6xl lg:text-7xl xl:text-8xl",
+                  "text-5xl font-black leading-[1.05] text-white md:text-6xl lg:text-5xl xl:text-8xl",
                   "drop-shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
                 )}
               >
@@ -202,7 +202,7 @@ export default function HeroSection({ className, intervalMs = 6000 }: Props) {
                 </span>
                 <span
                   className={cn(
-                    "block text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mt-2 md:mt-6",
+                    "block text-2xl md:text-4xl lg:text-3xl xl:text-3xl font-bold mt-2 md:mt-6",
                     "bg-gradient-to-r from-amber-200 via-amber-100 to-orange-200 bg-clip-text text-transparent",
                     mounted && !prefersReducedMotion ? "dd-slide-up" : ""
                   )}
@@ -216,7 +216,7 @@ export default function HeroSection({ className, intervalMs = 6000 }: Props) {
               <div className="mt-4 md:mt-8 max-w-3xl">
                 <p
                   className={cn(
-                    "text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-white/95",
+                    "text-lg md:text-xl lg:text-lg font-light leading-relaxed text-white/95",
                     "drop-shadow-[0_4px_16px_rgba(0,0,0,0.5)]",
                     mounted && !prefersReducedMotion ? "dd-fade-in-up" : ""
                   )}

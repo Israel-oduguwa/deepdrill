@@ -5,6 +5,7 @@ import HeroSection from "./PageComponents/HeroSection";
 import About from "./PageComponents/About";
 import Services from "./PageComponents/Services";
 import ICTSection from "./PageComponents/IctSection";
+import SafetySection from "./PageComponents/SafetySection";
 
 export default function HomePage() {
   return (
@@ -71,7 +72,8 @@ export default function HomePage() {
       </section> */}
       <Services/>
       {/* SAFETY */}
-      <section id="safety" className="py-20 bg-white">
+      <SafetySection />
+      {/* <section id="safety" className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Safety</h2>
           <p className="mt-3 text-slate-700 max-w-2xl">
@@ -80,7 +82,7 @@ export default function HomePage() {
             improvement.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* ICT */}
       {/* <section id="ict" className="py-20 bg-slate-50">
